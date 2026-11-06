@@ -47,4 +47,6 @@ El mock guarda los usuarios en memoria, en el data bucket `usuarios`. El fixture
 
 ## Git
 
-Si `git rev-parse --show-toplevel` devuelve `C:/Users/ricar`, esta carpeta aún no tiene repositorio propio: el detectado abarca todo el home, incluidos `.ssh/` y `.claude.json`. En ese caso no ejecutes `git add -A`, `git commit -a` ni `git clean`; primero hay que ejecutar `git init` en esta carpeta.
+Rama principal: `main`, con `origin` en GitHub. La estrategia de ramas está en `docs/branching-strategy.md`.
+
+`prompts.txt` está sin versionar a propósito: no lo agregues a un commit sin confirmarlo con el usuario. Usa `git add` con rutas concretas o `git add -u`, nunca `git add -A`.
