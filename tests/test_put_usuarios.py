@@ -65,7 +65,7 @@ def test_actualizar_usuario_con_datos_invalidos(usuarios_client: UsuariosClient,
 
 
 @pytest.mark.negative
-@pytest.mark.parametrize("cuerpo", PAYLOADS_MALFORMADOS)
+@pytest.mark.parametrize("cuerpo", PAYLOADS_MALFORMADOS.values(), ids=PAYLOADS_MALFORMADOS.keys())
 def test_actualizar_usuario_con_payload_malformado(usuarios_client: UsuariosClient, cuerpo: bytes) -> None:
     validar_payload_malformado(usuarios_client.enviar_crudo("PUT", f"{USUARIOS_PATH}/1", cuerpo))
 

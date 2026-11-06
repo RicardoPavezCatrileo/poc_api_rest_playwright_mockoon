@@ -1,4 +1,5 @@
 from collections.abc import Iterator
+from typing import Any
 
 import pytest
 from playwright.sync_api import APIRequestContext, Error, Playwright, sync_playwright
@@ -7,6 +8,10 @@ from clients.auth_client import AuthClient
 from clients.usuarios_client import UsuariosClient
 from config.settings import ConfiguracionTimeout, settings
 from data.auth import CREDENCIALES_VALIDAS
+
+
+def pytest_html_report_title(report: Any) -> None:
+    report.title = "POC API REST: Playwright, Pytest y Mockoon"
 
 
 def _crear_contexto(playwright: Playwright, cabeceras: dict[str, str] | None = None) -> APIRequestContext:

@@ -49,12 +49,12 @@ PAYLOADS_INVALIDOS: dict[str, dict[str, Any]] = {
     "id-en-el-cuerpo": {**USUARIO_NUEVO, "id": 50},
 }
 
-PAYLOADS_MALFORMADOS: list[bytes] = [
-    b'{"nombre": "Ana", "email": ',
-    b'{"nombre": "Ana",}',
-    b"esto no es json",
-    b"",
-]
+PAYLOADS_MALFORMADOS: dict[str, bytes] = {
+    "json-truncado": b'{"nombre": "Ana", "email": ',
+    "coma-final": b'{"nombre": "Ana",}',
+    "texto-plano": b"esto no es json",
+    "cuerpo-vacio": b"",
+}
 
 # Código de /api/errores/<código>: (error, mensaje).
 ERRORES_HTTP: dict[int, tuple[str, str]] = {

@@ -43,7 +43,7 @@ def test_login_incorrecto_responde_401(cliente_sin_autenticacion: AuthClient, cr
 
 
 @pytest.mark.negative
-@pytest.mark.parametrize("cuerpo", PAYLOADS_MALFORMADOS)
+@pytest.mark.parametrize("cuerpo", PAYLOADS_MALFORMADOS.values(), ids=PAYLOADS_MALFORMADOS.keys())
 def test_login_con_cuerpo_malformado_responde_401(cliente_sin_autenticacion: AuthClient, cuerpo: bytes) -> None:
     validar_error(cliente_sin_autenticacion.login(cuerpo), 401, "Unauthorized")
 

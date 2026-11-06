@@ -7,6 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Requieren Mockoon en marcha, Desktop o CLI, nunca ambos en el mismo puerto; si no, Pytest se detiene con código de salida 3.
 
 ```powershell
+npx @mockoon/cli@9.10.0 validate --data .\mocks\usuarios-api.json
 npx @mockoon/cli@9.10.0 start --data .\mocks\usuarios-api.json --disable-log-to-file   # Terminal aparte
 python -m pip install -r requirements.txt
 python -m pytest -v
