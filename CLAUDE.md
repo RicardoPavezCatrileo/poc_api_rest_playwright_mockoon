@@ -49,4 +49,4 @@ El mock guarda los usuarios en memoria, en el data bucket `usuarios`. El fixture
 
 Rama principal: `main`, con `origin` en GitHub. La estrategia de ramas está en `docs/branching-strategy.md`.
 
-`prompts.txt` está sin versionar a propósito: no lo agregues a un commit sin confirmarlo con el usuario. Usa `git add` con rutas concretas o `git add -u`, nunca `git add -A`.
+`prompts.txt` está en `.gitignore` y no se publica. Usa `git add` con rutas concretas o `git add -u`, nunca `git add -A`.

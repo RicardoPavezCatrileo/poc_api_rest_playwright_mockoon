@@ -11,6 +11,9 @@ htmlcov/
 # Configuración local
 .env
 
+# Archivo local del usuario, no se publica
+prompts.txt
+
 # Reportes generados
 reports/*.html
 
